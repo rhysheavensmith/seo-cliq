@@ -3,18 +3,11 @@ import { calculateROI } from '../utils/calculateROI';
 import CalculatorInputs from './CalculatorInputs';
 import CalculatorResults from './CalculatorResults';
 
-/**
- * Base component for the SEO ROI calculators.
- * @param {Object} props
- * @param {string} props.title - Title of the calculator.
- * @param {Array} props.fieldConfig - Configuration for the input fields.
- * @param {Object} props.initialInputs - Initial input values.
- */
 const ROICalculatorBase = ({ title, fieldConfig, initialInputs }) => {
 	const [inputs, setInputs] = useState(initialInputs);
 	const [results, setResults] = useState({
 		visitors: 0,
-		// For service-based, 'leads' will be included
+		leads: 0,
 		conversions: 0,
 		averageOrderValue: 0,
 		netRevenue: 0,
@@ -51,8 +44,8 @@ const ROICalculatorBase = ({ title, fieldConfig, initialInputs }) => {
 	}, [inputs]);
 
 	return (
-		<div className='mx-auto xl:max-w-full py-4 px-8 bg-white rounded-lg shadow-md'>
-			<h1 className='text-2xl md:text-4xl my-8 font-forma-bold text-center text-[#001738]'>
+		<div className='mx-auto xl:max-w-[80%] py-4 px-8 bg-[#0b0b0b] rounded-lg shadow-lg'>
+			<h1 className='text-2xl md:text-4xl my-8 font-bold text-center text-white border-b-2 border-[#ff8c02] pb-2'>
 				{title}
 			</h1>
 			<div className='flex flex-col lg:flex-row gap-6 justify-center items-center'>

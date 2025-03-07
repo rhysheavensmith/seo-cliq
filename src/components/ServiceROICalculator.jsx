@@ -1,8 +1,5 @@
 import ROICalculatorBase from './ROICalculatorBase';
 
-/**
- * Service-Based SEO Calculator (includes extra Close Rate field).
- */
 const ServiceROICalculator = () => {
 	const fieldConfig = [
 		{
@@ -59,7 +56,7 @@ const ServiceROICalculator = () => {
 		},
 		{
 			name: 'lifetimeValue',
-			label: 'Life Time Value',
+			label: 'Lifetime Value',
 			min: '0',
 			max: '10000',
 			step: '1',
