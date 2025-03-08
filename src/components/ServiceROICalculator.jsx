@@ -77,7 +77,7 @@ const ServiceROICalculator = () => {
 
 	return (
 		<ROICalculatorBase
-			title='SEO ROI for Service-Based'
+			title='SEO ROI for Service Providers'
 			fieldConfig={fieldConfig}
 			initialInputs={initialInputs}
 		/>
